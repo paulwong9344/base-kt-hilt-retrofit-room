@@ -1,0 +1,126 @@
+build:
+  excludeCorrectable: true
+  maxIssues: 0
+
+comments:
+  CommentOverPrivateFunction:
+    active: false
+  CommentOverPrivateProperty:
+    active: false
+
+complexity:
+  LargeClass:
+    active: true
+    threshold: 500
+  LongMethod:
+    active: true
+    threshold: 60
+  LongParameterList:
+    active: true
+    functionThreshold: 6
+    constructorThreshold: 18
+    ignoreDefaultParameters: true
+    ignoreDataClasses: true
+    ignoreAnnotated: [ 'retrofit2.http.POST', 'POST' ]
+  MethodOverloading:
+    active: true
+    threshold: 3
+  NestedBlockDepth:
+    active: true
+    threshold: 4
+  StringLiteralDuplication:
+    active: true
+    threshold: 2
+    ignoreAnnotation: true
+    excludeStringsWithLessThan5Characters: true
+    ignoreStringsRegex: '$^'
+  TooManyFunctions:
+    active: true
+    thresholdInFiles: 30
+    thresholdInClasses: 48
+    thresholdInInterfaces: 23
+    thresholdInObjects: 10
+    thresholdInEnums: 4
+  ComplexMethod:
+    active: true
+    ignoreSingleWhenExpression: true
+    ignoreSimpleWhenEntries: true
+
+exceptions:
+  ExceptionRaisedInUnexpectedLocation:
+    active: true
+  NotImplementedDeclaration:
+    active: true
+  TooGenericExceptionCaught:
+    active: false
+  PrintStackTrace:
+    active: true
+
+formatting:
+  android: true
+  EnumEntryNameCase:
+    active: true
+  ImportOrdering:
+    active: true
+  Indentation:
+    active: true
+  NoWildcardImports:
+    active: false
+
+naming:
+  EnumNaming:
+    active: true
+    enumEntryPattern: '[A-Z][_A-Z0-9]*'
+
+potential-bugs:
+  ImplicitDefaultLocale:
+    active: true
+  LateinitUsage:
+    active: false
+  MapGetWithNotNullAssertionOperator:
+    active: true
+  UnnecessaryNotNullOperator:
+    active: true
+  UnnecessarySafeCall:
+    active: true
+  UnsafeCast:
+    active: true
+
+style:
+  ReturnCount:
+    active: true
+    excludeGuardClauses: true
+  ForbiddenMethodCall:
+    active: true
+    methods:
+      - 'kotlin.io.println'
+      - 'kotlin.io.print'
+      - 'android.util.Log.wtf'
+      - 'android.util.Log.e'
+      - 'android.util.Log.w'
+      - 'android.util.Log.d'
+      - 'android.util.Log.i'
+      - 'android.util.Log.v'
+  MandatoryBracesIfStatements:
+    active: true
+  MandatoryBracesLoops:
+    active: true
+  SpacingBetweenPackageAndImports:
+    active: true
+  TrailingWhitespace:
+    active: true
+  UnderscoresInNumericLiterals:
+    active: true
+  UnusedImports:
+    active: true
+  UnusedPrivateMember:
+    active: true
+  UseDataClass:
+    active: true
+    allowVars: true
+  VarCouldBeVal:
+    active: true
+  WildcardImport:
+    active: false
+  ForbiddenComment:
+    values: [ 'STOPSHIP:' ]
